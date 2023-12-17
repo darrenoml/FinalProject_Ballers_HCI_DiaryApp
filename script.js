@@ -1,4 +1,3 @@
-
 // $(document).ready(function () {
 //     $("#sidebar").mCustomScrollbar({
 //         theme:"minimal"
@@ -371,6 +370,7 @@ window.addEventListener("scroll", function(){
             const bio = document.getElementById("bio");
             bio.innerText = userObj.bioDetail;
           }
+
 
 
 
