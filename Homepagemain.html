@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <style type="text/css" id="operaUserStyle"></style>
+    
+    <title></title>
+  </head>
+  
+  
+  <body onload="DiaryList()">
+    <div id="mySidebar" class="sidebar" style="width: 150px;">
+      <div class="col-6 col-sm-3 close">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          ×
+        </a>
+      </div>
+
+      <div id="sb-header" class="container sidebar-header">
+        <div class="row">
+          <div class="col-6">
+            <img src="defaultpfp.jpg" class="rounded-circle shadow-4 avatar" alt="Avatar">
+          </div>
+        </div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="row text-center">
+          <div class="col-6">
+            <p class="text-profile text-center">Anonymous#7672</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-content">
+        
+        <div class="nav-pills">
+            <a href="Homepagemain.html">
+              <i class="bi bi-house-fill px-1"></i>
+              <span>Home</span>
+            </a>
+          </div>
+  
+          <div class="nav-pills">
+            <a href="RevisedHomepage.html">
+              <i class="bi bi-journals px-1"></i>
+              <span>My diary</span>
+            </a>
+          </div>
+          
+        <div class="nav-pills">
+          <a href="testing.html">
+            <i class="bi bi-person-circle px-1"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="#">
+            <i class="bi bi-key px-1"></i>
+            <span>Security</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="#">
+            <i class="bi bi-info-circle px-1"></i>
+            <span>FAQ</span>
+          </a>
+        </div>
+
+        <div class="nav-pills last-item">
+          <a href="#">
+            <i class="bi bi-box-arrow-left px-1"></i>
+            <span>Log out</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="s">
+      
+    </div>
+    <!--main content-->
+    <div class="main-content mt-" id="main" style="margin-left: 150px;">
+      <button class="openbtn" onclick="openNav()" style="position: fixed; z-index: 99;">☰</button>
+      <div class="super-header mt-5">
+        <div class="header my-3" id="main-Header">
+          <h3 class="p-3">Diary timelines</h3>
+        </div>
+      </div>
+  
+    </div>
+    <!--demo cards-->
+    <div id="timeline1" class="container d-flex flex-wrap justify-content-center">
+      
+      <div id="demo1" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo2" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo3" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo4" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo5" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo6" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo7" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+      <div id="demo8" class="card" style="width: 18rem; height: 13rem; line-height: 12rem; margin: 10px; cursor: pointer; overflow: hidden; text-overflow: ellipsis; transition: transform 0.3s, box-shadow 0.3s; transition: scale(1); box-shadow:  4px 8px 0 rgba(0,0,0,0.2); ">
+        <div class="card-body">
+          <h5 class="card-title">Homeless life #32</h5>
+          <h6 class="card-subtitle mb-2 text-muted">#Happy #Sad</h6>
+          <p class="card-text">
+            I’ve found warmer shelter under a dark, slightly broken bridge. I have company too. There’s three men sat in the corner and they look to be...
+          </p>
+          <P class="card-text">3 Hours ago</P>
+        </div>
+      </div>
+
+    </div>
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+
+      window.addEventListener("scroll", function(){
+        let navbar = document.getElementById("headerMain");
+        if(window.pageYOffset>=300){
+          navbar.classList.add("force-fixed-header");
+        }
+        else{
+          navbar.classList.remove("force-fixed-header");
+        }
+      })
+
+
+
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "150px";
+        document.getElementById("main").style.marginLeft = "150px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+
+      // 1. akan ada array untuk menampung setiap posting diary
+      // 2. diary akan ada element?
+      //  a. title
+      //  b. body
+      //  c. date
+      //  diary akan disimpan dalam local storage dengan key : user_diary
+
+      // akan menggunakan class diary
+      
+      // Demo cards //
+      const obj1 = document.getElementById("demo1");
+      const obj2 = document.getElementById("demo2");
+      const obj3 = document.getElementById("demo3");
+      const obj4 = document.getElementById("demo4");
+      const obj5 = document.getElementById("demo5");
+      const obj6 = document.getElementById("demo6");
+      const obj7 = document.getElementById("demo7");
+      const obj8 = document.getElementById("demo8");
+
+      obj1.addEventListener("mouseenter", function() {
+            obj.style.transform = "scale(1.05)";
+            obj.style.boxShadow = "0 8px 16px 0 rgba(0,0,0,0.2)";
+        });
+
+      obj1.addEventListener("mouseleave", function() {
+            obj.style.transform = "scale(1)";
+            obj.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)";
+        });
+
+      obj1.addEventListener("click", function() {
+            obj.setAttribute("data-bs-toggle", "modal")
+            obj.setAttribute("data-bs-target", "#" + diary.title + "1")
+          
+        });
+    </script>
+  
+
+</body></html>
+Homepagemain.html
+12 KB

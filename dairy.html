@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dairy Timeline</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div id="header" class="container">
+      <div class="row">
+        <div id="title" class="col">Dairy Timeline</div>
+      </div>
+    </div>
+    <!-- text posting -->
+    <div id="posting" class="container">
+      <div class="row">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="form-title"
+            placeholder="Diary Title"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <textarea class="form-control" id="form-body" rows="3"> </textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" onclick="PostDiary()">
+        Post
+      </button>
+    </div>
+    <!-- display -->
+    <div id="timeline" class="container">
+      <div
+        class="d-inline-flex p-2 bd-highlight"
+        style="background-color: rgb(133, 141, 187); margin: 10px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col">Title</div>
+            <div class="col">Created Date</div>
+          </div>
+          <div class="co">Body</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 1. akan ada array untuk menampung setiap posting diary
+      // 2. diary akan ada element?
+      //  a. title
+      //  b. body
+      //  c. date
+      //  diary akan disimpan dalam local storage dengan key : user_diary
+
+      // akan menggunakan class diary
+
+      class Diary {
+        constructor(title, body, createdAt) {
+          this.title = title;
+          this.body = body;
+          this.createdAt = createdAt;
+        }
+      }
+
+      // CRUD
+      // CREATE
+      // READ
+      // UPDATE
+      // DELETE
+      function PostDiary() {
+        // create new post
+        // get form value
+        // get form title
+        const titleForm = document.getElementById("form-title").value;
+        // get form body
+        const bodyForm = document.getElementById("form-body").value;
+
+        // create new diary
+        const createDate = new Date();
+        const newDiary = new Diary(titleForm, bodyForm, createDate);
+
+        // get local storage
+        let diaries = localStorage.getItem("user_diary");
+        if (diaries === "" || diaries === null) {
+          const diariesArr = [newDiary];
+          diaries = JSON.stringify(diariesArr);
+        } else {
+          const diariesArr = JSON.parse(diaries);
+          diariesArr.push(newDiary);
+          diaries = JSON.stringify(diariesArr);
+        }
+
+        // store to local storage
+        localStorage.setItem("user_diary", diaries);
+
+        // show to timeline
+        document.getElementById("timeline").appendChild(CreatePosts[newDiary])
+      }
+
+      function CreatePosts() {
+        const diaries = JSON.parse(localStorage.getItem("user_diary"));
+        if (diaries && diaries.length > 0) {
+            const timelineElement = document.getElementById("timeline");
+            timelineElement.innerHTML = "";
+            diaries.forEach((diary) => {
+                const postElement = document.createElement("div");
+                postElement.style.backgroundColor = "rgb(0, 477, 480)";
+                postElement.style.margin = "15px";
+                const titleElement = document.createElement("div");
+                titleElement.classList.add("container");
+                titleElement.innerHTML = `
+                    <div class="row">
+                        <div class="col">${diary.title}</div>
+                        <div class="col">${diary.createdAt}</div>
+                    </div>
+                    <div class="co">${diary.body}</div>
+                `;
+                postElement.appendChild(titleElement);
+                timelineElement.appendChild(postElement);
+            });
+        }
+    }
+    CreatePosts();
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/c8ecb8cdcf.js" crossorigin="anonymous"></script>
+    
+    <title>Navbar 2</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!--Sidebar-->
+        <nav id="sidebar">
+
+            <div id="sidebar-dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="sidebar-header">
+                <div class="sidebar-avatar">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" class="rounded-circle shadow-4 avatar" alt="Avatar">
+                </div>
+                
+                <p class="h7">Anonymous#456</p>
+            </div>
+            <div class="sidebar-content">
+
+                <ul class="list-unstyled components">
+
+                    <li class="my-2 mb-3 p-2">
+                        <a href="#homePage" class="text-white text-decoration-none">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="text-white">Home</span>
+                        </a>
+                    </li>
+
+                    <p class="my-3 mt-4 px-2" >Settings</p>
+
+                    <li class="my-1 p-2">
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="">Profile</span>
+                        </a>
+                    </li>
+
+                    <li class="my-1 p-2">
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fa-solid fa-lock"></i>
+                            <span class="text-white">Security</span>
+                        </a>
+                    </li>
+
+                    <li class="my-1 p-2">
+                        <a href="#" class="text-white text-decoration-none">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span class="text-white">FAQ</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul id="logout-button" class="list-unstyled components">
+                    <li class="p-1" >
+                        <a href="#" class="text-white text-decoration-none  ">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="text-white">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+        
+            </div>
+        </nav>
+        <!--Content-->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+    
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left">Toggle Sidebar</i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="overlay"></div>
+
+    </div>
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                // hide sidebar
+                $('#sidebar').removeClass('active');
+                // hide overlay
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                // open sidebar
+                $('#sidebar').addClass('active');
+                // fade in the overlay
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+</html>

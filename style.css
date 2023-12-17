@@ -1,0 +1,158 @@
+/* Import fonts */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+/* root colors */
+:root {
+  --light-theme-1: rgb(255, 255, 255);
+  --light-theme-2: rgb(255, 255, 255);
+  --light-theme-3: rgb(236, 240, 252);
+  --light-theme-4: rgb(216, 225, 247);
+  --light-theme-5: rgb(242, 248, 255);
+
+  --shadow-1: rgba(141, 141, 141, 0.5);
+
+  --dark-theme-1: rgb(67, 63, 88);
+  --dark-theme-2: rgb(68, 65, 82);
+  --dark-theme-3: rgb(86, 83, 109);
+  
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-theme-3) !important;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.7em;
+}
+
+/* Id settings */
+
+#light-mode {
+  background-color: aqua;
+}
+
+
+
+
+
+body {
+    font-family: "Poppins", sans-serif;
+  }
+
+
+.sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--light-theme-1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar-header {
+  background-color: var(--light-theme-2);
+  padding-top: 1.2rem;
+}
+
+.avatar {
+  width: 90px;
+  margin: auto;
+  margin-left: 0.8rem;
+  display: block;
+}
+
+.sidebar-content {
+  height: fit-content;
+  display: flex;
+  flex-direction: column ;
+  flex: 1;
+  align-items: normal;
+}
+
+.sidebar-content .last-item a {
+  position: absolute;
+  bottom: 2rem;
+}
+
+
+
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+  display: flex;
+  transition: 200ms;
+  margin-left: -10px;
+  text-wrap: nowrap;
+}
+
+.sidebar a:hover {
+  color: #0400ff;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--light-theme-1);
+  color: black;
+  padding: 5px 10px;
+  border-width: 1px;
+  border-color: #4444443d;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+.main-content {
+  background-color: var(--light-theme-3);
+}
+.main-content .super-header {
+  position: relative;
+}
+.main-content .header {
+  background-color: var(--light-theme-1);
+  color: black;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 5px var(--shadow-1);
+  padding-top: 100p;
+}
+/* cards */
+
+.forceInline {
+  word-break: break-all;
+}
+
+#main {
+  transition: 0.5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

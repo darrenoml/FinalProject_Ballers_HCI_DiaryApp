@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style type="text/css" id="operaUserStyle"></style>
+    
+    <title></title>
+  </head>
+  
+  
+  <body onload="start()">
+    <div id="mySidebar" class="sidebar" style="width: 150px;">
+      <div class="col-6 col-sm-3 close">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          ×
+        </a>
+      </div>
+
+      <div id="sb-header" class="container sidebar-header">
+        <div class="row">
+          <div class="col-6">
+            <img src="" alt="Avatar" id="nav-avatar">
+          </div>
+        </div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="row text-center">
+          <div class="col-6">
+            <p class="text-profile text-center">Anonymous#7672</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-content">
+
+        <div class="nav-pills">
+          <a href="Homepagemain.html">
+            <i class="bi bi-house-fill px-1"></i>
+            <span>Home</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="RevisedHomepage.html">
+            <i class="bi bi-journals px-1"></i>
+            <span>My diary</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="testing.html">
+            <i class="bi bi-person-circle px-1"></i>
+            <span>Profile</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="#">
+            <i class="bi bi-key px-1"></i>
+            <span>Security</span>
+          </a>
+        </div>
+
+        <div class="nav-pills">
+          <a href="#">
+            <i class="bi bi-info-circle px-1"></i>
+            <span>FAQ</span>
+          </a>
+        </div>
+
+        <div class="nav-pills last-item">
+          <a href="#">
+            <i class="bi bi-box-arrow-left px-1"></i>
+            <span>Log out</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="main-content mt-" id="main" style="margin-left: 150px;">
+      <button class="openbtn" onclick="openNav()" style="position: fixed; z-index: 99;">☰</button>
+      <div class="super-header mt-5">
+        <!-- diary timeline -->
+        <!-- header -->
+        <div class="header my-3" id="mainHeader">
+          <div id="header" class="container">
+            <div class="row">
+              <div id="title" class="col"></div>
+            </div>
+          </div>
+          <!-- text posting -->
+          <div id="posting" class="container-xl posts my-2">
+            <div class="row">
+              <div class="form-group my-1">
+                <input type="text" class="form-control" id="form-title" placeholder="Diary Title">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="form-tag" placeholder="Diary Tag">
+              </div>
+            </div>
+            <div class="row my-1">
+              <div class="form-group">
+                <textarea class="form-control" id="form-body" rows="3" placeholder="Write here"> </textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary my-2" onclick="PostDiary()">
+              Post
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- display -->
+      <div id="timeline" class="container d-flex flex-wrap justify-content-center">
+
+      </div>
+  
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body></html>

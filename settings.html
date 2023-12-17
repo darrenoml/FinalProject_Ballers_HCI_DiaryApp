@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="index4.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: auto;
+     width: 640px;
+     padding: 50px;
+     font-family: 'Avenir', sans-serif;
+     color: #33475b;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+img{
+     padding: 10px;
+}
+</style>
+<body>
+    <div style="text-align: center;">
+    <center><img class="pfp"src="pfp1.jpg" title="Call me Darren" height = "290" width="240" style="float:left; padding: 20px;" /></center>
+ </div>
+<br>
+
+ <form action="/update-settings" method="post">
+    <label for="profilePicture">Profile Picture:</label>
+    <select id="profilePicture" name="profilePicture">
+      <option value="image1.PNG">Image 1</option>
+      <option value="image2.PNG">Image 2</option>
+      <option value="image3.PNG">Image 3</option>
+      <option value="image4.PNG">Image 4</option>
+      <option value="image5.PNG">Image 5</option>
+    </select>
+    <br><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <br><br>
+
+    <label for="dob">Date Of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <br><br>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+    <br><br>
+
+    <input type="submit" value="Save Changes">
+  </form>
+  <script>
+    function changeProfilePicture(imageName) {
+      document.getElementById('profileImage').src = imageName;
+    }
+  </script>
+</body>
+</html>
